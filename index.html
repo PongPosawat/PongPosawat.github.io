@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>การเปรียบเทียบ OOP ใน Java, C++, และ Python</title>
+    <title>การเปรียบเทียบการเขียนโปรแกรมเชิงวัตถุ (OOP) ใน Java, C++, Python</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #f0f8ff;
         }
-        h1 {
+        h1, h2 {
             color: #333;
         }
         table {
@@ -20,34 +20,42 @@
             margin: 20px 0;
         }
         table, th, td {
-            border: 1px solid #ddd;
+            border: 1px solid #007acc;
         }
         th, td {
             padding: 12px;
             text-align: left;
         }
         th {
-            background-color: #333;
+            background-color: #007acc;
             color: #fff;
         }
         tr:nth-child(even) {
-            background-color: #f2f2f2;
+            background-color: #e0f7ff;
+        }
+        tr:nth-child(odd) {
+            background-color: #f0fbff;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 20px 0;
+            padding-left: 40px;
         }
     </style>
 </head>
 <body>
 
-    <h1>การเปรียบเทียบความเหมือนและความแตกต่างของ OOP ในภาษา Java, C++, และ Python</h1>
+    <h1>การเปรียบเทียบการเขียนโปรแกรมเชิงวัตถุ (OOP) ใน Java, C++, และ Python</h1>
 
-    <h2>ความเหมือน</h2>
+    <h2>ความเหมือนของ OOP ใน Java, C++, และ Python</h2>
     <ul>
-        <li><strong>การใช้ Class และ Object:</strong> ทั้ง Java, C++, และ Python ล้วนเป็นภาษาที่รองรับ OOP โดยมีการใช้งาน class และ object เพื่อการสร้างและจัดการข้อมูล</li>
-        <li><strong>Encapsulation (การห่อหุ้ม):</strong> ทุกภาษามีแนวคิดการห่อหุ้ม โดยใช้ตัวแปรและเมธอดในการควบคุมการเข้าถึงข้อมูลภายใน</li>
-        <li><strong>Inheritance (การสืบทอด):</strong> ทุกภาษาสามารถใช้ inheritance เพื่อแบ่งปันพฤติกรรมและคุณสมบัติระหว่างคลาสต่างๆ</li>
-        <li><strong>Polymorphism (พหุรูป):</strong> รองรับการทำ polymorphism ทำให้สามารถใช้งานเมธอดเดียวกันในคลาสที่แตกต่างกันได้</li>
+        <li><strong>การใช้ Class และ Object:</strong> ทุกภาษารองรับแนวคิดการใช้คลาสและออบเจ็กต์ในการออกแบบโปรแกรม</li>
+        <li><strong>Inheritance (การสืบทอด):</strong> ทุกภาษารองรับการสืบทอดคลาสเพื่อแบ่งปันฟังก์ชันและคุณสมบัติระหว่างคลาสต่าง ๆ</li>
+        <li><strong>Polymorphism (พหุรูป):</strong> สามารถใช้งาน polymorphism ในการเรียกใช้เมธอดเดียวกันจากออบเจ็กต์ที่แตกต่างกัน</li>
+        <li><strong>Encapsulation (การห่อหุ้ม):</strong> มีการห่อหุ้มข้อมูลและฟังก์ชันภายในคลาส</li>
     </ul>
 
-    <h2>ความแตกต่าง</h2>
+    <h2>ความแตกต่างระหว่าง OOP ใน Java, C++, และ Python</h2>
     <table>
         <thead>
             <tr>
@@ -60,33 +68,44 @@
         <tbody>
             <tr>
                 <td><strong>การจัดการหน่วยความจำ</strong></td>
-                <td>มี Garbage Collector ในการจัดการหน่วยความจำอัตโนมัติ</td>
-                <td>ผู้เขียนโปรแกรมต้องจัดการหน่วยความจำเอง (ใช้ new/delete)</td>
-                <td>มี Garbage Collector เหมือน Java แต่สามารถจัดการหน่วยความจำเองได้ในบางกรณี</td>
+                <td>ใช้ Garbage Collector จัดการหน่วยความจำอัตโนมัติ</td>
+                <td>ต้องจัดการหน่วยความจำเองโดยใช้ <code>new</code> และ <code>delete</code></td>
+                <td>ใช้ Garbage Collector จัดการหน่วยความจำ แต่สามารถจัดการเองได้บางส่วน</td>
             </tr>
             <tr>
                 <td><strong>การประกาศตัวแปร</strong></td>
-                <td>ต้องระบุตัวแปรชนิดข้อมูลชัดเจน (strongly-typed)</td>
-                <td>เหมือน Java ต้องระบุตัวแปรชนิดข้อมูล</td>
-                <td>ไม่ต้องระบุตัวแปรชนิดข้อมูล (dynamically-typed)</td>
+                <td>ต้องระบุชนิดข้อมูลที่ชัดเจน (strongly-typed)</td>
+                <td>ต้องระบุชนิดข้อมูลและมีการจัดการความปลอดภัยของตัวแปร (strongly-typed)</td>
+                <td>ไม่ต้องระบุชนิดข้อมูล (dynamically-typed)</td>
             </tr>
             <tr>
-                <td><strong>Multiple Inheritance</strong></td>
-                <td>ไม่รองรับ Multiple Inheritance แต่ใช้ Interface แทน</td>
+                <td><strong>Multiple Inheritance (การสืบทอดหลายคลาส)</strong></td>
+                <td>ไม่รองรับ Multiple Inheritance แต่สามารถใช้ Interface แทน</td>
                 <td>รองรับ Multiple Inheritance</td>
                 <td>รองรับ Multiple Inheritance</td>
             </tr>
             <tr>
-                <td><strong>การเขียนโค้ด</strong></td>
-                <td>ต้องเขียนเป็นบรรทัดๆ มี Syntax ที่เข้มงวด</td>
-                <td>ต้องจัดโครงสร้างโค้ดอย่างเป็นระเบียบ มี Syntax ที่ซับซ้อนกว่าภาษาอื่น</td>
-                <td>เขียนโค้ดง่าย อ่านง่าย มี Syntax ที่กระชับ</td>
+                <td><strong>การจัดการข้อยกเว้น (Exception Handling)</strong></td>
+                <td>มีโครงสร้างการจัดการข้อยกเว้นที่เข้มงวด (try-catch)</td>
+                <td>รองรับการจัดการข้อยกเว้น แต่ไม่บังคับให้ตรวจสอบข้อผิดพลาด</td>
+                <td>รองรับการจัดการข้อยกเว้นในรูปแบบที่เข้าใจง่าย</td>
+            </tr>
+            <tr>
+                <td><strong>ความยืดหยุ่นในการเขียนโค้ด</strong></td>
+                <td>มี Syntax ที่ชัดเจนและเข้มงวด</td>
+                <td>มี Syntax ที่ยืดหยุ่นและรองรับทั้ง low-level และ high-level programming</td>
+                <td>มี Syntax ที่กระชับและอ่านง่าย เหมาะสำหรับผู้เริ่มต้น</td>
             </tr>
         </tbody>
     </table>
 
     <h2>สรุป</h2>
-    <p>ภาษาทั้งสามรองรับแนวคิด OOP แต่มีจุดเด่นและข้อจำกัดแตกต่างกัน โดย C++ เป็นภาษาที่ให้ความยืดหยุ่นสูง แต่ต้องการการจัดการหน่วยความจำอย่างระมัดระวัง ในขณะที่ Java มีการจัดการหน่วยความจำอัตโนมัติและการเขียนโค้ดที่ชัดเจนกว่า Python มีความเรียบง่ายและเหมาะสำหรับผู้ที่ต้องการเรียนรู้การเขียนโปรแกรมเชิงวัตถุในลักษณะที่เข้าใจง่าย</p>
+    <p>ภาษาทั้งสามที่กล่าวมา (Java, C++, Python) ล้วนรองรับการเขียนโปรแกรมเชิงวัตถุ (OOP) แต่ละภาษามีข้อดีและข้อเสียที่แตกต่างกันตามการใช้งาน:</p>
+    <ul>
+        <li><strong>Java:</strong> เหมาะสำหรับโปรแกรมที่ต้องการความเสถียรและการจัดการหน่วยความจำอัตโนมัติ</li>
+        <li><strong>C++:</strong> เหมาะสำหรับโปรแกรมที่ต้องการประสิทธิภาพสูงและการควบคุมหน่วยความจำด้วยตนเอง</li>
+        <li><strong>Python:</strong> เป็นภาษาที่เรียบง่ายและยืดหยุ่น เหมาะสำหรับการพัฒนาโปรแกรมอย่างรวดเร็วและเหมาะกับผู้เริ่มต้น</li>
+    </ul>
 
 </body>
 </html>
