@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การเปรียบเทียบ OOP ใน Java, C++, และ Python</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>การเปรียบเทียบความเหมือนและความแตกต่างของ OOP ในภาษา Java, C++, และ Python</h1>
+
+    <h2>ความเหมือน</h2>
+    <ul>
+        <li><strong>การใช้ Class และ Object:</strong> ทั้ง Java, C++, และ Python ล้วนเป็นภาษาที่รองรับ OOP โดยมีการใช้งาน class และ object เพื่อการสร้างและจัดการข้อมูล</li>
+        <li><strong>Encapsulation (การห่อหุ้ม):</strong> ทุกภาษามีแนวคิดการห่อหุ้ม โดยใช้ตัวแปรและเมธอดในการควบคุมการเข้าถึงข้อมูลภายใน</li>
+        <li><strong>Inheritance (การสืบทอด):</strong> ทุกภาษาสามารถใช้ inheritance เพื่อแบ่งปันพฤติกรรมและคุณสมบัติระหว่างคลาสต่างๆ</li>
+        <li><strong>Polymorphism (พหุรูป):</strong> รองรับการทำ polymorphism ทำให้สามารถใช้งานเมธอดเดียวกันในคลาสที่แตกต่างกันได้</li>
+    </ul>
+
+    <h2>ความแตกต่าง</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>หัวข้อ</th>
+                <th>Java</th>
+                <th>C++</th>
+                <th>Python</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>การจัดการหน่วยความจำ</strong></td>
+                <td>มี Garbage Collector ในการจัดการหน่วยความจำอัตโนมัติ</td>
+                <td>ผู้เขียนโปรแกรมต้องจัดการหน่วยความจำเอง (ใช้ new/delete)</td>
+                <td>มี Garbage Collector เหมือน Java แต่สามารถจัดการหน่วยความจำเองได้ในบางกรณี</td>
+            </tr>
+            <tr>
+                <td><strong>การประกาศตัวแปร</strong></td>
+                <td>ต้องระบุตัวแปรชนิดข้อมูลชัดเจน (strongly-typed)</td>
+                <td>เหมือน Java ต้องระบุตัวแปรชนิดข้อมูล</td>
+                <td>ไม่ต้องระบุตัวแปรชนิดข้อมูล (dynamically-typed)</td>
+            </tr>
+            <tr>
+                <td><strong>Multiple Inheritance</strong></td>
+                <td>ไม่รองรับ Multiple Inheritance แต่ใช้ Interface แทน</td>
+                <td>รองรับ Multiple Inheritance</td>
+                <td>รองรับ Multiple Inheritance</td>
+            </tr>
+            <tr>
+                <td><strong>การเขียนโค้ด</strong></td>
+                <td>ต้องเขียนเป็นบรรทัดๆ มี Syntax ที่เข้มงวด</td>
+                <td>ต้องจัดโครงสร้างโค้ดอย่างเป็นระเบียบ มี Syntax ที่ซับซ้อนกว่าภาษาอื่น</td>
+                <td>เขียนโค้ดง่าย อ่านง่าย มี Syntax ที่กระชับ</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>สรุป</h2>
+    <p>ภาษาทั้งสามรองรับแนวคิด OOP แต่มีจุดเด่นและข้อจำกัดแตกต่างกัน โดย C++ เป็นภาษาที่ให้ความยืดหยุ่นสูง แต่ต้องการการจัดการหน่วยความจำอย่างระมัดระวัง ในขณะที่ Java มีการจัดการหน่วยความจำอัตโนมัติและการเขียนโค้ดที่ชัดเจนกว่า Python มีความเรียบง่ายและเหมาะสำหรับผู้ที่ต้องการเรียนรู้การเขียนโปรแกรมเชิงวัตถุในลักษณะที่เข้าใจง่าย</p>
+
+</body>
+</html>
