@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Comparison with Java/C/Python</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        code { background-color: #f4f4f4; padding: 2px 5px; border-radius: 3px; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        h2 { color: #333; }
+    </style>
+</head>
+<body>
+
+    <h1>Comparison between PHP and Java/C/Python</h1>
+
+    <!-- Section 1: Passing Arguments by Reference -->
+    <h2>1. Passing Arguments by Reference</h2>
+    <p><strong>PHP:</strong> In PHP, you can pass arguments by reference using the <code>&</code> symbol, which allows the function to modify the original variable.</p>
+    <pre><code>function addFive(&$num) {
+    $num += 5;
+}
+
+$original = 10;
+addFive($original);
+echo $original;  // Output: 15
+    </code></pre>
+    
+    <p><strong>Java:</strong> Java uses reference passing for objects, but primitive types are passed by value.</p>
+    <pre><code>public class Example {
+    public static void addFive(int num) {
+        num += 5;
+    }
+
+    public static void main(String[] args) {
+        int original = 10;
+        addFive(original);
+        System.out.println(original);  // Output: 10
+    }
+}
+    </code></pre>
+
+    <p><strong>C:</strong> C uses pointers for reference passing.</p>
+    <pre><code>void addFive(int* num) {
+    *num += 5;
+}
+
+int main() {
+    int original = 10;
+    addFive(&original);
+    printf("%d", original);  // Output: 15
+    return 0;
+}
+    </code></pre>
+
+    <p><strong>Python:</strong> Python passes objects by reference for all types.</p>
+    <pre><code>def add_five(num):
+    return num + 5
+
+original = 10
+print(add_five(original))  // Output: 15
+    </code></pre>
+
+    <!-- Section 2: Variable Number of Arguments -->
+    <h2>2. Variable Number of Arguments</h2>
+    <p><strong>PHP:</strong> You can pass a variable number of arguments using <code>...</code>.</p>
+    <pre><code>function sum(...$numbers) {
+    return array_sum($numbers);
+}
+
+echo sum(1, 2, 3, 4);  // Output: 10
+    </code></pre>
+    
+    <p><strong>Java:</strong> Similar to PHP, Java uses <code>...</code> (varargs).</p>
+    <pre><code>public static int sum(int... numbers) {
+    int sum = 0;
+    for (int num : numbers) {
+        sum += num;
+    }
+    return sum;
+}
+
+public static void main(String[] args) {
+    System.out.println(sum(1, 2, 3, 4));  // Output: 10
+}
+    </code></pre>
+
+    <p><strong>C:</strong> C uses <code>va_list</code> for variable arguments.</p>
+    <pre><code>#include &lt;stdarg.h&gt;
+
+int sum(int count, ...) {
+    va_list args;
+    va_start(args, count);
+    int result = 0;
+    for (int i = 0; i < count; i++) {
+        result += va_arg(args, int);
+    }
+    va_end(args);
+    return result;
+}
+
+int main() {
+    printf("%d", sum(4, 1, 2, 3, 4));  // Output: 10
+    return 0;
+}
+    </code></pre>
+
+    <p><strong>Python:</strong> Python uses <code>*args</code> for variable arguments.</p>
+    <pre><code>def sum_all(*numbers):
+    return sum(numbers)
+
+print(sum_all(1, 2, 3, 4))  // Output: 10
+    </code></pre>
+
+    <!-- Section 3: PHP is a Loosely Typed Language -->
+    <h2>3. PHP is a Loosely Typed Language</h2>
+    <p><strong>PHP:</strong> In PHP, you do not need to declare the type of variables, and they can change types dynamically.</p>
+    <pre><code>$variable = 5;        // Integer
+$variable = "Hello";  // String
+echo $variable;       // Output: Hello
+    </code></pre>
+    
+    <p><strong>Java:</strong> Java is a strongly typed language, so you must declare variable types.</p>
+    <pre><code>int num = 5;
+num = "Hello";  // Error: incompatible types
+    </code></pre>
+
+    <p><strong>C:</strong> Similar to Java, C is a strongly typed language.</p>
+    <pre><code>int num = 5;
+num = "Hello";  // Error: incompatible types
+    </code></pre>
+
+    <p><strong>Python:</strong> Python is dynamically typed but strongly typed.</p>
+    <pre><code>num = 5
+num = "Hello"
+print(num)  // Output: Hello
+    </code></pre>
+
+    <!-- Section 4: PHP Return Type Declarations -->
+    <h2>4. PHP Return Type Declarations</h2>
+    <p><strong>PHP:</strong> Since PHP 7.0, you can declare return types in function definitions.</p>
+    <pre><code>function addNumbers(int $a, int $b): int {
+    return $a + $b;
+}
+
+echo addNumbers(2, 3);  // Output: 5
+    </code></pre>
+
+    <p><strong>Java:</strong> Java requires return types in all methods.</p>
+    <pre><code>public static int addNumbers(int a, int b) {
+    return a + b;
+}
+
+public static void main(String[] args) {
+    System.out.println(addNumbers(2, 3));  // Output: 5
+}
+    </code></pre>
+
+    <p><strong>C:</strong> C requires return types in all functions.</p>
+    <pre><code>int addNumbers(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    printf("%d", addNumbers(2, 3));  // Output: 5
+    return 0;
+}
+    </code></pre>
+
+    <p><strong>Python:</strong> Python supports return type hints, but they are not enforced.</p>
+    <pre><code>def add_numbers(a: int, b: int) -> int:
+    return a + b
+
+print(add_numbers(2, 3))  // Output: 5
+    </code></pre>
+
+</body>
+</html>
